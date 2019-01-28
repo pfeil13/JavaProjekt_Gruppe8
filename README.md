@@ -20,3 +20,4 @@ Nice-to-have:
 -Notizblock auf dem lösungen notiert und nachgeschaut werden können
 -Bestenliste
 -Minispielmodus?
+-Tipps?
