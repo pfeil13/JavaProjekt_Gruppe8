@@ -14,6 +14,7 @@ Spielprinzip:
 -Zeit wird gemessen und Schnelligkeit gibt ebenfalls Punkte
 -Punkte werden in der unteren Ecke angegeben
 -Manche Dinge können aufgehoben und/oder kombiniert werden
+-Text wird aus Textdatei gezogen?
 
 Nice-to-have:
 -Notizblock auf dem lösungen notiert und nachgeschaut werden können
