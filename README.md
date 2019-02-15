@@ -1,8 +1,4 @@
-# JavaProjekt
-
-Unser Projekt:
-
----Quiz---
+# JavaProjekt - Quiz
 
 Fragen
 -
