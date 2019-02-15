@@ -1,4 +1,5 @@
 import java.io.*;
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -14,10 +15,10 @@ public class Main {
 
 class Fragen
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
 
-        FileReader fr = new FileReader("test.txt");
+        FileReader fr = new FileReader("src/test.txt");
         BufferedReader br = new BufferedReader(fr);
 
         String zeile1 = br.readLine();
