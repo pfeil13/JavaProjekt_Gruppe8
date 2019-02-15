@@ -65,18 +65,3 @@ class Themengebiete{
     }
 }
 
-class Fragen
-{
-    public static void main(String[] args) throws IOException
-    {
-
-        FileReader fr = new FileReader("src/fragenallg.txt");
-        BufferedReader br = new BufferedReader(fr);
-
-        String zeile1 = br.readLine();
-        System.out.println(zeile1);
-
-        br.close();
-
-    }
-}
