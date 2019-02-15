@@ -3,7 +3,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
+        //Menüaufruf
+
+        System.out.println("Herzlich Willkommen zu unserem Quiz.");
+        System.out.println("Verrate uns doch noch deinen Namen: ");
+
+
+
     }
-    //ToDo Methoden Aufrufe verlinken
 }
