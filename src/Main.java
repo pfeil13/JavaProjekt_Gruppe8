@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Menue.menue();//Menüaufruf
+        Menue.menue(args);//Menüaufruf
 
 
 
@@ -16,7 +16,8 @@ public class Main {
 
 class Menue
 {
-    public static void menue()
+
+    public static void menue(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
@@ -27,39 +28,34 @@ class Menue
         System.out.println("Hallo "+name+", was möchtest du machen? \n Quiz starten(1)  Tipps/Hilfe(2)  Themengebiete(3)");
         int auswahl=scanner.nextInt();
 
-        if (auswahl==1)
+        if (auswahl==1)//Hier wird zur passenden Methode weitergeleitet
         {
-            Quiz.quiz();
+            Quiz.main(String);
         }
         else if(auswahl==2)
         {
-            Hilfe.hilfe();
+            Hilfe.hilfe(name);
         }
         else
         {
-            Themengebiete.themengebiete();
+            Themengebiete.themengebiete(name);
         }
     }
 
 }
 
-class Quiz
-{
-    public static void quiz()
-    {
-       System.out.println("Test");
-    }
-}
+
 
 class Hilfe{
-    public static void hilfe()
+    public static void hilfe(String name)
     {
-        System.out.println("Test");
+        System.out.println("Brauchst du Hilfe "+name+"?");
+
     }
 }
 
 class Themengebiete{
-    public static void themengebiete()
+    public static void themengebiete(String name)
     {
         System.out.println("Test");
     }
