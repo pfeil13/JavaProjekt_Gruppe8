@@ -25,21 +25,23 @@ class Menue
         System.out.println("Verrate uns doch noch deinen Namen: ");
         String name= scanner.next();
 
-        System.out.println("Hallo "+name+", was möchtest du machen? \n Quiz starten(1)  Tipps/Hilfe(2)  Themengebiete(3)");
-        int auswahl=scanner.nextInt();
+        System.out.println("Hallo "+name+", was möchtest du machen? \n Quiz starten(1)  Hilfe(2)");
+        int auswahl;
 
-        if (auswahl==1)//Hier wird zur passenden Methode weitergeleitet
-        {
-            Quiz.main(String);
-        }
-        else if(auswahl==2)
-        {
-            Hilfe.hilfe(name);
-        }
-        else
-        {
-            Themengebiete.themengebiete(name);
-        }
+        do {
+            auswahl=scanner.nextInt();
+            if (auswahl == 1)//Hier wird zur passenden Methode weitergeleitet
+            {
+                System.out.println("Hallo");// Todo:auf Quiz Methode verweisen, sobald fertig
+            } else if (auswahl == 2)
+            {
+                Hilfe.hilfe(name);
+            } else
+            {
+                System.out.println("Bitte geben sie 1 oder 2 ein!");
+
+            }
+        } while(auswahl!=1 || auswahl!=2);
     }
 
 }
@@ -51,13 +53,9 @@ class Hilfe{
     {
         System.out.println("Brauchst du Hilfe "+name+"?");
 
+
     }
 }
 
-class Themengebiete{
-    public static void themengebiete(String name)
-    {
-        System.out.println("Test");
-    }
-}
+
 
