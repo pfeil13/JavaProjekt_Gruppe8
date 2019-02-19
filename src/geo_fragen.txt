@@ -159,9 +159,9 @@ Welcher See liegt nicht in Bayern?
 3) Schweriner See
 4) Ammersee
 3
-Durch welchen Industriezwei ist Wolfsburg bekannt?
+Durch welchen Industriezweig ist Wolfsburg bekannt?
 4
-1) Wölfe
+1) Zucht von halbzahmen Wölfen für den Streichelzoobetrieb
 2) Bergbau
 3) Automobil-Industrie
 4) Burgenbauzentrum
