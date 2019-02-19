@@ -33,15 +33,13 @@ class GeoFragen {
         for (String alternative : alternatives) {
             print += alternative + "\n";
         }
-        print += "Answer: " + answer + "\n";
+        //print += "Answer: " + answer + "\n";                      //Antworten werden nicht mehr angezeigt.
         return print;
     }
 }
 
 class Questions {
     private ArrayList<GeoFragen> questions = new ArrayList<>();
-
-    //This should be written more efficiently! This is not good practise! Just a quick prototype.
     public Questions()  {
         try {
             FileReader file = new FileReader("src/geo_fragen.txt");

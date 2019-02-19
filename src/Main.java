@@ -74,8 +74,6 @@ class Hilfe
 
         System.out.println("Diese Option ist nicht verfügbar!");
         Hilfe.main(args);
-
-
         breader.close();
     }
 }
