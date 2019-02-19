@@ -30,11 +30,11 @@ class Menue
 
         if (auswahl==1)//Hier wird zur passenden Methode weitergeleitet
         {
-            Quiz.main(String);
+
         }
         else if(auswahl==2)
         {
-            Hilfe.hilfe(name);
+
         }
         else
         {
@@ -46,11 +46,35 @@ class Menue
 
 
 
-class Hilfe{
-    public static void hilfe(String name)
+class Hilfe
+{
+    public static void main(String[] args) throws IOException
     {
-        System.out.println("Brauchst du Hilfe "+name+"?");
+        FileReader freader = new FileReader("src/anleitung");
+        BufferedReader breader = new BufferedReader(freader);
 
+        String zeile = "";
+
+        while( (zeile = breader.readLine()) != null )
+        {
+            System.out.println(zeile);
+        }
+
+        System.out.println("");
+        System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
+        System.out.println("(1) zurück");
+        Scanner eingabe = new Scanner(System.in);
+        int option= eingabe.nextInt();
+
+        if (option == 1) {
+        Menue.menue(args);
+    } else if (option != 1)
+
+        System.out.println("Diese Option ist nicht verfügbar!");
+        Hilfe.main(args);
+
+
+        breader.close();
     }
 }
 
