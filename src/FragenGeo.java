@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 class FragenGeo {
-    public static void main(String[] args) throws IOException {
+    public static void main(String name,String[] args) throws IOException {
         FileReader fr = new FileReader("src/fragen_geographie.txt");
         BufferedReader br = new BufferedReader(fr);
         String zeile_x = "0";
@@ -25,10 +25,10 @@ class FragenGeo {
                     auswahl = eingabe.nextInt();
                     if (auswahl == 1)
                     {
-                        FragenGeo.main(args);
+                        FragenGeo.main(name,args);
                     }else if (auswahl == 2)
                     {
-                        Menue.menue(args);
+                        Menue.menue(name,args);
                     }
                 }while(auswahl!=1 || auswahl!=2);
 
