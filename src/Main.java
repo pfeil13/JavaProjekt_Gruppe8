@@ -50,7 +50,6 @@ class Menue {
 
 }
 
-
 class Hilfe {
     public static void main(String[] args) throws IOException {
         FileReader freader = new FileReader("src/anleitung");
@@ -78,13 +77,11 @@ class Hilfe {
     }
 }
 
-
 class FragenGeo {
     public static void main(String[] args) throws IOException {
         FileReader fr = new FileReader("src/geo_fragen2.txt");
         BufferedReader br = new BufferedReader(fr);
         String zeile_x = "0";
-
 
         do {
             zeile_x = br.readLine();
@@ -117,119 +114,3 @@ class FragenGeo {
         br.close();
     }
 }
-
-
-class AusgabeFragenGeo {
-    public static void main(String[] args) {
-        Questions ausgabe = new Questions();
-        for (GeoFragen question : ausgabe.getQuestions()) {
-            System.out.println(question);
-        }
-    }
-}
-
-
-/*
-
-
-class AusgabeFragenGeo
-{
-    public static void main(String[] args) {
-        Questions ausgabe = new Questions();
-        for (GeoFragen question : ausgabe.getQuestions()) {
-            System.out.println(question);
-        }
-    }
-}
-
-class AusgabeFragenGeo
-{
-    public static void main(String[] args) {
-        Questions ausgabe = new Questions();
-        for (GeoFragen question : ausgabe.getQuestions()) {
-            System.out.println(question);
-        }
-    }
-}
-
-
-class AusgabeFragenGeo
-{
-    public static void main(String[] args) {
-        Questions ausgabe = new Questions();
-        for (GeoFragen question: ausgabe.getQuestions())
-        {
-            System.out.println(question);
-        }
-    }
-}
-
-class FragenGeo
-
-{
-    public static void main(String[] args) throws IOException
-    {
-        FileReader fr = new FileReader("src/geo_fragen2.txt");
-        BufferedReader br = new BufferedReader(fr);
-
-        String zeile1 = br.readLine();
-        System.out.println(zeile1);
-        String zeile2 = br.readLine();
-        System.out.println(zeile2);
-        String zeile3 = br.readLine();
-        System.out.println(zeile3);
-        String zeile4 = br.readLine();
-        System.out.println(zeile4);
-        String zeile5 = br.readLine();
-        System.out.println(zeile5);
-        String antwort = br.readLine();
-
-        br.close();
-    }
-}
-
-class FragenGeo2
-{
-    public static void main(String[] args) throws IOException
-    {
-        FileReader fr = new FileReader("src/geo_fragen2.txt");
-        BufferedReader br = new BufferedReader(fr);
-
-
-            for (int l = 1; l < 6; l++) {
-
-                String zeile = br.readLine();
-                System.out.println(zeile);
-                String antwort = br.readLine();
-                System.out.println("Antwort: " + antwort);
-            }
-
-
-        }
-
-
-    }
-
-
-    class FragenGeo2
-{
-    public static void main(String[] args) throws IOException
-    {
-        FileReader fr = new FileReader("src/geo_fragen2.txt");
-        BufferedReader br = new BufferedReader(fr);
-
-
-        for (int l = 1; l < 6; l++) {
-
-            String zeile = br.readLine();
-            System.out.println(zeile);
-        }
-
-
-    }
-
-
-}
-
-
-*/
