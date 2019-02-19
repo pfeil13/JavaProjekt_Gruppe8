@@ -38,7 +38,7 @@ class Menue
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1)
                 {
-                    AusgabeFragenGeo.main(args);
+                   FragenGeo.main(args);
                 }else if (eingabe ==2)
                 {
                     Menue.menue(args);
@@ -90,6 +90,78 @@ class Hilfe
     }
 }
 
+
+class FragenGeo
+
+{
+    public static void main(String[] args) throws IOException
+    {
+        FileReader fr = new FileReader("src/geo_fragen2.txt");
+        BufferedReader br = new BufferedReader(fr);
+
+        String zeile1 = br.readLine();
+        System.out.println(zeile1);
+        String zeile2 = br.readLine();
+        System.out.println(zeile2);
+        String zeile3 = br.readLine();
+        System.out.println(zeile3);
+        String zeile4 = br.readLine();
+        System.out.println(zeile4);
+        String zeile5 = br.readLine();
+        System.out.println(zeile5);
+        String str_antwort = br.readLine();
+        Integer int_antwort = Integer.valueOf(str_antwort);
+
+        //System.out.println("Musterlösung: " + int_antwort); Nur zur Kontrolle
+
+        System.out.println("Deine Antwort: ");
+        Scanner scanner = new Scanner(System.in);
+        String str_eingabe = scanner.nextLine();
+        Integer int_eingabe = Integer.valueOf(str_eingabe);
+
+        if (int_eingabe == int_antwort)
+        {
+            System.out.println("Das war die richtige Antwort!");
+        }else if (int_eingabe != int_antwort){
+            System.out.println("Das war leider falsch!");
+        }
+
+        br.close();
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
+
+
+class AusgabeFragenGeo
+{
+    public static void main(String[] args) {
+        Questions ausgabe = new Questions();
+        for (GeoFragen question : ausgabe.getQuestions()) {
+            System.out.println(question);
+        }
+    }
+}
+
+class AusgabeFragenGeo
+{
+    public static void main(String[] args) {
+        Questions ausgabe = new Questions();
+        for (GeoFragen question : ausgabe.getQuestions()) {
+            System.out.println(question);
+        }
+    }
+}
+
+
 class AusgabeFragenGeo
 {
     public static void main(String[] args) {
@@ -101,4 +173,50 @@ class AusgabeFragenGeo
     }
 }
 
+class FragenGeo
 
+{
+    public static void main(String[] args) throws IOException
+    {
+        FileReader fr = new FileReader("src/geo_fragen2.txt");
+        BufferedReader br = new BufferedReader(fr);
+
+        String zeile1 = br.readLine();
+        System.out.println(zeile1);
+        String zeile2 = br.readLine();
+        System.out.println(zeile2);
+        String zeile3 = br.readLine();
+        System.out.println(zeile3);
+        String zeile4 = br.readLine();
+        System.out.println(zeile4);
+        String zeile5 = br.readLine();
+        System.out.println(zeile5);
+        String antwort = br.readLine();
+
+        br.close();
+    }
+}
+
+class FragenGeo2
+{
+    public static void main(String[] args) throws IOException
+    {
+        FileReader fr = new FileReader("src/geo_fragen2.txt");
+        BufferedReader br = new BufferedReader(fr);
+
+
+            for (int l = 1; l < 6; l++) {
+
+                String zeile = br.readLine();
+                System.out.println(zeile);
+                String antwort = br.readLine();
+                System.out.println("Antwort: " + antwort);
+            }
+
+
+        }
+
+
+    }
+
+*/
