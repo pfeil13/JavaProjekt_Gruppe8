@@ -4,26 +4,42 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main( String[] args) throws IOException {
 
-        Menue.menue(args);//Menüaufruf
+        Scanner scanner =new Scanner(System.in);
+
+        System.out.println("Herzlich Willkommen zu unserem Quiz.");
+        System.out.println("Verrate uns doch noch deinen Namen: ");
+        String name= scanner.next();
+        //Menue.intro();
+        Menue.menue(name, args);//Menüaufruf
 
 
 
     }
-}
+
+
+    }
+
+
 
 
 class Menue
 {
+    /*public static void intro() throws IOException {//Möglichkeit das intro auch aus der Main rauszubekommen?
 
-    public static void menue(String[] args) throws IOException
-    {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner =new Scanner(System.in);
 
-        System.out.println("Herzlich Willkommen zu unserem Quiz."); //TODO: Auslagern der Namensfeststellung, damit man nicht immer den Namen neu eingeben muss, sobald man beim Themengebiet auf "zurück" geht. Damit will man ja nur das Menü neu aufrufen und nicht nochmal seinen Namen eingeben!
+        System.out.println("Herzlich Willkommen zu unserem Quiz.");
         System.out.println("Verrate uns doch noch deinen Namen: ");
         String name= scanner.next();
+
+
+    }*/
+
+    public static void menue(String name,String[] args) throws IOException
+    {
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hallo "+name+", was möchtest du machen? \n Quiz starten(1)  Hilfe(2)");
         int auswahl;
@@ -41,13 +57,13 @@ class Menue
                    FragenGeo.main(args);
                 }else if (eingabe ==2)
                 {
-                    Menue.menue(args);
+                    Menue.menue(name,args);
                 }
 
 
             } else if (auswahl == 2)
             {
-                Hilfe.main(args);
+                Hilfe.main(name, args);
             } else
             {
                 System.out.println("Bitte geben sie 1 oder 2 ein!");
@@ -62,7 +78,7 @@ class Menue
 
 class Hilfe
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String name, String[] args) throws IOException
     {
         FileReader freader = new FileReader("src/anleitung");
         BufferedReader breader = new BufferedReader(freader);
@@ -81,11 +97,11 @@ class Hilfe
         int option= eingabe.nextInt();
 
         if (option == 1) {
-        Menue.menue(args);
+        Menue.menue(name,args);
     } else if (option != 1)
 
         System.out.println("Diese Option ist nicht verfügbar!");
-        Hilfe.main(args);
+        Hilfe.main(name,args);
         breader.close();
     }
 }
