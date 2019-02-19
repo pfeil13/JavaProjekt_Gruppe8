@@ -48,7 +48,7 @@ class Menue {
 
 class FragenGeo {
     public static void main(String[] args) throws IOException {
-        FileReader fr = new FileReader("src/geo_fragen2.txt");
+        FileReader fr = new FileReader("src/fragen_geographie.txt");
         BufferedReader br = new BufferedReader(fr);
         String zeile_x = "0";
         int richtig = 0;
