@@ -1,175 +1,151 @@
 Was ist die größte Stadt Deutschlands?
-4
 1) Frankfurt am Main
 2) Hamburg
 3) Berlin
 4) München
 3
 Was ist kein deutsches Mittelgebirge?
-4
 1) Grunewald
 2) Thüringer Wald
 3) Bayrischer Wald
 4) Schwarzwald
 1
 Der nördlichste Punkt Deutschlands liegt auf einer Insel. Auf welcher?
-4
 1) Sylt
 2) Amrum
 3) Helgoland
 4) Legoland
 1
 Wo findet man das Schloss "Sanssouci"?
-4
 1) Hannover
 2) Berlin
 3) Potsdam
 4) Orschweier
 3
 Welche Stadt liegt an der Elbe?
-4
 1) Hannover
 2) Halle
 3) Elbenhausen
 4) Magdeburg
 4
 Welche Stadt hat den größten Hafen?
-4
 1) Wilhelmshaven
 2) Hamburg
 3) Hafenhausen
 4) Bremerhaven
 2
 Was sind die "Maare" in der Eifel"?
-4
 1) Flüsse
 2) Vulkane
 3) Wälder
 4) Moore
 2
 Welches Bundesland grenzt nicht an Bayern?
-4
 1) Baden-Württemberg
 2) Hessen
 3) Thüringen
 4) Sachsen-Anhalt
 4
 Was ist keine Landeshauptstadt?
-4
 1) Lübeck
 2) Stuttgart
 3) Magdeburg
 4) Erfurt
 1
 Welche Stadt gehört nicht zum Rheinisch-Westfälischen Industriegebiet?
-4
 1) Köln
 2) Gelsenkirchen
 3) Münster
 4) Leverkusen
 3
 Wofür ist das "Alte Land" bei Hamburg bekannt?
-4
 1) Altenheim im Stadtteil Altona
 2) Obstanbau
 3) Reederei (Schiffsbau)
 4) Ältester Stadteil
 2
 Welche ist die kleinste Landeshauptstadt Deutschlands?
-4
 1) Schwerin
 2) München
 3) Erfurt
 4) Potsdam
 1
 Wie heißt die Hauptstadt von Hessen?
-4
 1) Offenbach
 2) Frankfurt am Main
 3) Wiesbaden
 4) Mainz
 3
 In den "Börden" herrscht welche Bodenart vor?
-4
 1) Lössboden
 2) Tonboden
 3) Sandboden
 4) Hausboote
 1
 Wie heißt der höchste Berg in Deutschland?
-4
 1) Feldberg
 2) Belchen
 3) Zugspitze
 4) Grand Ballon
 3
 Wer oder was ist ein "Hallig"?
-4
 1) Einkaufszentrum
 2) Heiliger der evangelischen Kirche
 3) Kleine Inseln ohne Deiche
 4) Mehrzahl von "Halle"
 3
 Wer verursacht "Ebbe und Flut"?
-4
 1) Erdrotation und Mondanziehung
 2) Sonne, Mond und Sterne
 3) Windräder
 4) Bundesamt für Ebbe und Flut
 1
 In welcher Stadt fließen Donau, Ilz und Inn zusammen?
-4
 1) Regensburg
 2) Passau
 3) Donilzinn in Oberbayern
 4) Augsburg
 2
 Welcher Erdschatz führte zur Entstehung es "Ruhrgebiet"?
-4
 1) Ruhren
 2) Eisenerz
 3) Zinn
 4) Kohle
 4
 Welche ist die östlichste Stadt Deutschlands?
-4
 1) Börlitz
 2) Görlitz
 3) Östlitz
 4) Zittau
 2
 Worin mündet der Rhein?
-4
 1) Wannsee
 2) Bodensee
 3) Dreisam bei Freiburg
 4) Nordsee
 4
 Wie heißt der längste Fluss innerhalb Deutschlands?
-4
 1) Main
 2) Rhein
 3) Donau
 4) Langau
 2
 Welcher See liegt nicht in Bayern?
-4
 1) Starnberger See
 2) Tegernsee
 3) Schweriner See
 4) Ammersee
 3
 Durch welchen Industriezweig ist Wolfsburg bekannt?
-4
 1) Zucht von halbzahmen Wölfen für den Streichelzoobetrieb
 2) Bergbau
 3) Automobil-Industrie
 4) Burgenbauzentrum
 3
 Welches der folgenden ist das flächenmäßig kleinste Bundesland?
-4
 1) Sachsen
 2) Saarland
 3) Legoland
 4) Thüringen
 2
+###
