@@ -69,6 +69,7 @@ class FragenGeo {
                 System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.");
                 break;
             }
+            System.out.println("");
             System.out.println(zeile_x);
             zeile_x = br.readLine();
             System.out.println(zeile_x);
@@ -87,7 +88,7 @@ class FragenGeo {
             if (eingabe.equals(antwort)) {
                 System.out.println("Das war die richtige Antwort!");
                 richtig++;
-            } else if (!eingabe.equals(antwort)) {
+            } else if (!eingabe.equals(antwort) && !eingabe.equals(null)) {
                 System.out.println("Das war leider falsch!");
                 falsch++;
             }
