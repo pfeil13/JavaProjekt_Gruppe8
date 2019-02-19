@@ -25,6 +25,13 @@ class FragenGeo {
                     System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zur Auswahl(2)");
                     Scanner eingabe = new Scanner(System.in);
                     auswahl = eingabe.nextInt();
+                    if (auswahl == 1)
+                    {
+                        FragenGeo.main(args);
+                    }else if (auswahl == 2)
+                    {
+                        Menue.menue(args);
+                    }
                 }while(auswahl!=1 || auswahl!=2);
 
             }
