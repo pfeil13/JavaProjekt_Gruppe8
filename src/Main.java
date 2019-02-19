@@ -1,17 +1,12 @@
 import java.io.*;
-import java.io.IOException;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
         Menue.menue(args);//Menüaufruf
-
-
     }
 }
-
 
 class Menue {
 
@@ -67,8 +62,8 @@ class FragenGeo {
             {
                 anzahlfragen=richtig+falsch;
                 System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.");
-
-                System.out.println("Was möchtest du jetzt tun? \n Dieses Themengebiet erneut bearbeiten(1) \n zurück zur Auswahl(2)");
+                System.out.println("");
+                System.out.println("Was möchtest du jetzt tun? \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zur Auswahl(2)");
                 Scanner eingabe = new Scanner(System.in);
                 int auswahl = eingabe.nextInt();
 
@@ -79,9 +74,7 @@ class FragenGeo {
                 {
                     Menue.menue(args);
                 }
-
-
-                break;
+                //break;
             }
             System.out.println("");
             System.out.println(zeile_x);
@@ -99,10 +92,14 @@ class FragenGeo {
             String eingabe = scanner.nextLine();
 
             if (eingabe.equals(antwort)) {
-                System.out.println("Das war die richtige Antwort!");
+                System.out.println("Das ist richtig!");
                 richtig++;
-            } else if (!eingabe.equals(antwort) && !eingabe.equals(null)) {
-                System.out.println("Das war leider falsch!");
+            } else if (eingabe.equals("")) {
+                System.out.println("Keine Antwort ist auch eine Antwort. Diese Frage ist falsch beantwortet.");
+                falsch++;
+            } else if (!eingabe.equals(antwort))
+            {
+                System.out.println("Das ist leider falsch.");
                 falsch++;
             }
         }
