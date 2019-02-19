@@ -54,6 +54,7 @@ class FragenGeo {
         int richtig = 0;
         int falsch = 0;
         int anzahlfragen = 0;
+        int auswahl;
         Scanner scanner = new Scanner(System.in);
 
         while (!zeile_x.equals("###")) {
@@ -61,22 +62,13 @@ class FragenGeo {
             if (zeile_x.equals("###"))
             {
                 anzahlfragen=richtig+falsch;
-                System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
-                System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zur Auswahl(2)");
-                Scanner eingabe = new Scanner(System.in);
-                int auswahl = eingabe.nextInt();
 
-                if (auswahl == 1)
-                {
-                    FragenGeo.main(args);
-                }else if(auswahl==2)
-                {
-                    Menue.menue(args);
-                }else if(auswahl!=1 || auswahl!=2)
-                {
-                    System.out.println("Bitte eines der beiden Optionen wählen!"); //TODO: Erneutes Abfragen was geschehen soll.
-                    break;
-                }
+                do{
+                    System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
+                    System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zur Auswahl(2)");
+                    Scanner eingabe = new Scanner(System.in);
+                    auswahl = eingabe.nextInt();
+                }while(auswahl!=1 || auswahl!=2);
 
                 //break;
             }
