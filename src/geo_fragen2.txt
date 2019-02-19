@@ -45,11 +45,13 @@ Welches Bundesland grenzt nicht an Bayern?
 2) Hessen
 3) Thüringen
 4) Sachsen-Anhalt
+4
 Was ist keine Landeshauptstadt?
 1) Lübeck
 2) Stuttgart
 3) Magdeburg
 4) Erfurt
+1
 Welche Stadt gehört nicht zum Rheinisch-Westfälischen Industriegebiet?
 1) Köln
 2) Gelsenkirchen
@@ -67,16 +69,19 @@ Welche ist die kleinste Landeshauptstadt Deutschlands?
 2) München
 3) Erfurt
 4) Potsdam
+1
 Wie heißt die Hauptstadt von Hessen?
 1) Offenbach
 2) Frankfurt am Main
 3) Wiesbaden
 4) Mainz
+3
 In den "Börden" herrscht welche Bodenart vor?
 1) Lössboden
 2) Tonboden
 3) Sandboden
 4) Hausboote
+1
 Wie heißt der höchste Berg in Deutschland?
 1) Feldberg
 2) Belchen
@@ -143,3 +148,4 @@ Welches der folgenden ist das flächenmäßig kleinste Bundesland?
 3) Legoland
 4) Thüringen
 2
+###
