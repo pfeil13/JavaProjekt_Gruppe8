@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Menue.menue(args);//Menüaufruf
+        Menue.menue(args); //TODO: Hier soll nach dem Namen gefragt werden. Dies soll dann der anderen Klassen übergeben werden können.
     }
 }
 
@@ -70,7 +70,6 @@ class FragenGeo {
                     auswahl = eingabe.nextInt();
                 }while(auswahl!=1 || auswahl!=2);
 
-                //break;
             }
             System.out.println("");
             System.out.println(zeile_x);
@@ -86,6 +85,7 @@ class FragenGeo {
 
             System.out.print("Deine Antwort: ");
             String eingabe = scanner.next();
+
 
             if (eingabe.equals(antwort)) {
                 System.out.println("Das ist richtig!");
