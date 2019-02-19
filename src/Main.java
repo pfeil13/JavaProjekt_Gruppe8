@@ -83,8 +83,12 @@ class FragenGeo {
         BufferedReader br = new BufferedReader(fr);
         String zeile_x = "0";
 
-        do {
+        while (!zeile_x.equals("###")) {
             zeile_x = br.readLine();
+            if (zeile_x.equals("###"))
+            {
+                break;
+            }
             System.out.println(zeile_x);
             zeile_x = br.readLine();
             System.out.println(zeile_x);
@@ -102,14 +106,12 @@ class FragenGeo {
             String str_eingabe = scanner.nextLine();
             Integer int_eingabe = Integer.valueOf(str_eingabe);
 
-             if (int_eingabe == int_antwort)
-            {
+            if (int_eingabe == int_antwort) {
                 System.out.println("Das war die richtige Antwort!");
-            }else if (int_eingabe != int_antwort){
+            } else if (int_eingabe != int_antwort) {
                 System.out.println("Das war leider falsch!");
             }
-        } while (!zeile_x.equals("###"));
-
+        }
 
         br.close();
     }
