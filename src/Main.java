@@ -59,7 +59,7 @@ class FragenGeo {
         int richtig = 0;
         int falsch = 0;
         int anzahlfragen = 0;
-
+        Scanner scanner = new Scanner(System.in);
 
         while (!zeile_x.equals("###")) {
             zeile_x = br.readLine();
@@ -67,6 +67,20 @@ class FragenGeo {
             {
                 anzahlfragen=richtig+falsch;
                 System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.");
+
+                System.out.println("Was möchtest du jetzt tun? \n Dieses Themengebiet erneut bearbeiten(1) \n zurück zur Auswahl(2)");
+                Scanner eingabe = new Scanner(System.in);
+                int auswahl = eingabe.nextInt();
+
+                if (auswahl == 1)
+                {
+                    FragenGeo.main(args);
+                }else if(auswahl==2)
+                {
+                    Menue.menue(args);
+                }
+
+
                 break;
             }
             System.out.println("");
@@ -82,7 +96,6 @@ class FragenGeo {
             String antwort = br.readLine();
 
             System.out.println("Deine Antwort: ");
-            Scanner scanner = new Scanner(System.in);
             String eingabe = scanner.nextLine();
 
             if (eingabe.equals(antwort)) {
