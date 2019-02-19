@@ -88,16 +88,13 @@ class FragenGeo {
             System.out.println(zeile_x);
             String antwort = br.readLine();
 
-            System.out.println("Deine Antwort: ");
-            String eingabe = scanner.nextLine();
+            System.out.print("Deine Antwort: ");
+            String eingabe = scanner.next();
 
             if (eingabe.equals(antwort)) {
                 System.out.println("Das ist richtig!");
                 richtig++;
-            } else if (eingabe.equals("")) {
-                System.out.println("Keine Antwort ist auch eine Antwort. Diese Frage ist falsch beantwortet.");
-                falsch++;
-            } else if (!eingabe.equals(antwort))
+            }  else if (!eingabe.equals(antwort))
             {
                 System.out.println("Das ist leider falsch.");
                 falsch++;
