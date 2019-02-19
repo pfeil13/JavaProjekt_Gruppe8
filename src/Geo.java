@@ -1,18 +1,15 @@
-//Dient nur zur Verbesserung des Verständnisses!
-
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Question {
+class GeoFragen {
     private String question;
     private String[] alternatives;
     private int answer;
 
-    public Question(String question, String[] alternatives, int answer) {
+    public GeoFragen(String question, String[] alternatives, int answer) {
         this.question = question;
         this.alternatives = alternatives;
         this.answer = answer;
@@ -42,12 +39,12 @@ class Question {
 }
 
 class Questions {
-    private ArrayList<Question> questions = new ArrayList<>();
+    private ArrayList<GeoFragen> questions = new ArrayList<>();
 
     //This should be written more efficiently! This is not good practise! Just a quick prototype.
     public Questions()  {
         try {
-            FileReader file = new FileReader("src/fragen.txt");
+            FileReader file = new FileReader("src/geo_fragen.txt");
             BufferedReader reader = new BufferedReader(file);
             Scanner scanner = new Scanner(reader);
 
@@ -78,7 +75,7 @@ class Questions {
 
                 }   while (answer == 0);
 
-                questions.add(new Question(question, alternatives, answer));
+                questions.add(new GeoFragen(question, alternatives, answer));
                 numberOfAlternatives = 0;
                 counter = 0;
                 answer = 0;
@@ -93,9 +90,19 @@ class Questions {
             e.printStackTrace();
         }
     }
-    public ArrayList<Question> getQuestions()  {
+    public ArrayList<GeoFragen> getQuestions()  {
         return questions;
     }
 }
-//https://teamtreehouse.com/community/make-a-text-file-of-questions-into-a-quiz-using-java-filereader
+
+class QuizSampler {
+    public static void main(String[] args)  {
+        Questions quiz = new Questions();
+        for (GeoFragen question: quiz.getQuestions()) {
+            System.out.println(question);
+        }
+    }
+}
+
+
 
