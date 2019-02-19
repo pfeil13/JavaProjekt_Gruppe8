@@ -60,14 +60,14 @@ class Questions {
                 do {
                     line = scanner.nextLine();
 
-                    if (line.contains("?")) { //stores the question
+                    if (line.contains("?")) { //speichern der Frage
                         question = line;
-                    } else if(counter == 0 && line.length() == 1) { //stores the number of alternatives
+                    } else if(counter == 0 && line.length() == 1) { //Auslesen der Antworten
                         numberOfAlternatives = Integer.valueOf(line);
                         alternatives = new String[numberOfAlternatives];
-                    } else if (line.contains(")")) { //stores the alternatives
+                    } else if (line.contains(")")) { //Speichern der Antworten
                         alternatives[counter++] = line;
-                    } else if (Character.isDigit(line.indexOf(0)) || counter == numberOfAlternatives) { //Stores the answer
+                    } else if (Character.isDigit(line.indexOf(0)) || counter == numberOfAlternatives) { //Speichern der richtigen Antwort
                         answer = Integer.valueOf(line);
                     }
 

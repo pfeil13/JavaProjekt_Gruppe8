@@ -21,7 +21,7 @@ class Menue
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Herzlich Willkommen zu unserem Quiz.");
+        System.out.println("Herzlich Willkommen zu unserem Quiz."); //TODO: Auslagern der Namensfeststellung, damit man nicht immer den Namen neu eingeben muss, sobald man beim Themengebiet auf "zurück" geht. Damit will man ja nur das Menü neu aufrufen und nicht nochmal seinen Namen eingeben!
         System.out.println("Verrate uns doch noch deinen Namen: ");
         String name= scanner.next();
 
@@ -30,9 +30,21 @@ class Menue
 
         do {
             auswahl=scanner.nextInt();
-            if (auswahl == 1)//Hier wird zur passenden Methode weitergeleitet
+
+            if (auswahl == 1)
             {
-                System.out.println("Hallo");// Todo:auf Quiz Methode verweisen, sobald fertig
+
+                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1)  zurück(2)");
+                int eingabe = scanner.nextInt();
+                if (eingabe == 1)
+                {
+                    AusgabeFragenGeo.main(args);
+                }else if (eingabe ==2)
+                {
+                    Menue.menue(args);
+                }
+
+
             } else if (auswahl == 2)
             {
                 Hilfe.main(args);
@@ -78,6 +90,15 @@ class Hilfe
     }
 }
 
-
+class AusgabeFragenGeo
+{
+    public static void main(String[] args) {
+        Questions ausgabe = new Questions();
+        for (GeoFragen question: ausgabe.getQuestions())
+        {
+            System.out.println(question);
+        }
+    }
+}
 
 
