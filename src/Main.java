@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Menue.menue(args);//Menüaufruf
 
@@ -17,7 +17,7 @@ public class Main {
 class Menue
 {
 
-    public static void menue(String[] args)
+    public static void menue(String[] args) throws IOException
     {
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ class Menue
                 System.out.println("Hallo");// Todo:auf Quiz Methode verweisen, sobald fertig
             } else if (auswahl == 2)
             {
-                Hilfe.hilfe(name);
+                Hilfe.main(args);
             } else
             {
                 System.out.println("Bitte geben sie 1 oder 2 ein!");
@@ -80,8 +80,6 @@ class Hilfe
     }
 }
 
-    }
-}
 
 
 
