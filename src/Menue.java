@@ -1,5 +1,5 @@
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 class Menue {
 
@@ -39,38 +39,3 @@ class Menue {
         } while (auswahl != 1 || auswahl != 2);
     }
 }
-
-
-
-
-
-
-   /* public static void menue(String name, String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1)  Hilfe(2)");
-        int auswahl;
-
-        do {
-            auswahl = scanner.nextInt();
-
-            if (auswahl == 1) {
-
-                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1)  zurück(2)");
-                int eingabe = scanner.nextInt();
-                if (eingabe == 1) {
-                    FragenSampler.übergabe(args, eingabe);
-                } else if (eingabe == 2) {
-                    Menue.menue(name, args);
-                }
-
-
-            } else if (auswahl == 2) {
-                Hilfe.main(name, args);
-            } else {
-                System.out.println("Bitte geben sie 1 oder 2 ein!");
-
-            }
-        } while (auswahl != 1 || auswahl != 2);
-    }
-}
-*/

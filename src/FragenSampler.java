@@ -80,27 +80,3 @@ class FragenSampler {
 
 
 }
-
-/*
-class Zuweisung
-{
-    public static void main(int eingabe, String[] args) throws IOException
-    {
-        String begin = "src/fragen_";
-        String endung = ".txt";
-
-
-        //Zuweisung für den FileReader
-        if (eingabe == 1)
-        {
-            //Pfad
-            String path = begin+"geographie"+endung;
-        } else if (eingabe == 2)
-        {
-            //Pfad
-           String path = begin+"sport"+endung;
-        }
-
-    }
- }
-*/
