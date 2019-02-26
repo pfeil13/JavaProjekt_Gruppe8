@@ -20,7 +20,7 @@ class Menue {
             auswahl = scanner.nextInt();
 
             if (auswahl == 1) {
-
+                //TODO: Jedes Themengebiet hat maximal 25 Fragen, dies sollte beim Abfragen der benutzerdefinierten Fragenanzahl berücksichtig werden.
                 System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Zufallsmodus(3) \n zurück(4)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1) {
