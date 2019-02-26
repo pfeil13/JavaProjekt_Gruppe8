@@ -47,7 +47,7 @@ class Menue {
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1)
                 {
-                   FragenGeo.main(name,args);
+                   FragenSampler.main(name, eingabe,args);
                 }else if (eingabe ==2) {
                     Menue.menue(name,args);
                 }
