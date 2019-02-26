@@ -1,0 +1,7 @@
+Welche Mannschaft ist die Beste?
+1) SC Freiburg
+2) BVB
+3) Bayern München
+4) RB Leipzig
+1
+###
