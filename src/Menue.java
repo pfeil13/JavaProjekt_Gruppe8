@@ -21,11 +21,14 @@ class Menue {
 
             if (auswahl == 1) {
 
-                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1)  zurück(2)");
+                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n zurück(3)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1) {
                     FragenSampler.main(name, args, eingabe);
                 } else if (eingabe == 2) {
+                    FragenSampler.main(name,args, eingabe);
+                } else if (eingabe == 3)
+                {
                     Menue.main(args,name);
                 }
 
