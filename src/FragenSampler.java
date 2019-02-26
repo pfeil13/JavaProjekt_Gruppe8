@@ -3,22 +3,21 @@ import java.util.*;
 
 class FragenSampler {
 
-    public static void main(String name, String[] args, int eingabe) throws IOException {
+    public static void main(String name, String[] args, int eingabe, int anzahl) throws IOException {
 
         String begin = "src/fragen_";
         String endung = ".txt";
-        String path="";
+        String path = "";
 
         //Zuweisung für den FileReader
-        if (eingabe == 1)
-        {
+        if (eingabe == 1) {
             //Pfad
-            path = begin+"geographie"+endung;
+            path = begin + "geographie" + endung;
         } else if (eingabe == 2) {
             //Pfad
-            path = begin+"sport"+endung;
+            path = begin + "sport" + endung;
         } else if (eingabe == 3) {
-            //TODO: Zufallsmodus
+            //TODO: Zufallsmodus!!!
         }
 
         FileReader fr = new FileReader(path);
@@ -31,26 +30,25 @@ class FragenSampler {
         Scanner scanner = new Scanner(System.in);
 
 
-        //Fragen werden ausgewählt (je nach "path") und ausgegeben, sowie ausgewertet.
-
-        while (!zeile_x.equals("###")) {
+        while (!zeile_x.equals("###") && anzahl != 0) {
             zeile_x = br.readLine();
-            if (zeile_x.equals("###")) {
+
+            if (zeile_x.equals("###") || anzahl == 0) {
                 anzahlfragen = richtig + falsch;
 
                 do {
                     System.out.println("\n" + name + " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
                     System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zum Menü(2)");
-                    //Scanner scanner = new Scanner(System.in);
                     auswahl = scanner.nextInt();
                     if (auswahl == 1) {
-                        FragenSampler.main(name,args,eingabe);
+                        FragenSampler.main(name, args, eingabe, anzahl);
                     } else if (auswahl == 2) {
-                        Menue.main(args,name);
+                        Menue.main(args, name);
                     }
                 } while (auswahl != 1 || auswahl != 2);
-
             }
+
+
             System.out.println("");
             System.out.println(zeile_x);
             zeile_x = br.readLine();
@@ -70,14 +68,13 @@ class FragenSampler {
             if (eingabeantwort.equals(antwort)) {
                 System.out.println("Das ist richtig!");
                 richtig++;
+                anzahl--;
             } else if (!eingabeantwort.equals(antwort)) {
                 System.out.println("Das ist leider falsch.");
                 falsch++;
+                anzahl--;
             }
         }
-
         br.close();
     }
-
-
 }

@@ -24,11 +24,20 @@ class Menue {
                 System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Zufallsmodus(3) \n zurück(4)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1) {
-                    FragenSampler.main(name, args, eingabe);
+                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                    int anzahl = scanner.nextInt();
+
+                    FragenSampler.main(name, args, eingabe, anzahl);
                 } else if (eingabe == 2) {
-                    FragenSampler.main(name, args, eingabe);
+                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                    int anzahl = scanner.nextInt();
+
+                    FragenSampler.main(name, args, eingabe, anzahl);
                 } else if (eingabe == 3) {
-                    FragenSampler.main(name, args, eingabe);
+                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                    int anzahl = scanner.nextInt();
+
+                    FragenSampler.main(name, args, eingabe, anzahl);
                 } else if (eingabe == 4) {
                     Menue.main(args, name);
                 }
