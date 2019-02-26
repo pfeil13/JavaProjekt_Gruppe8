@@ -14,10 +14,11 @@ class FragenSampler {
         {
             //Pfad
             path = begin+"geographie"+endung;
-        } else if (eingabe == 2)
-        {
+        } else if (eingabe == 2) {
             //Pfad
             path = begin+"sport"+endung;
+        } else if (eingabe == 3) {
+            //TODO: Zufallsmodus
         }
 
         FileReader fr = new FileReader(path);

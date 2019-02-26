@@ -26,18 +26,16 @@ class Menue {
                 if (eingabe == 1) {
                     FragenSampler.main(name, args, eingabe);
                 } else if (eingabe == 2) {
-                    FragenSampler.main(name,args, eingabe);
-                } else if (eingabe == 3)
-                {
-                    //TODO: Zufallsmodus
-                } else if (eingabe == 4)
-                {
-                    Menue.main(args,name);
+                    FragenSampler.main(name, args, eingabe);
+                } else if (eingabe == 3) {
+                    FragenSampler.main(name, args, eingabe);
+                } else if (eingabe == 4) {
+                    Menue.main(args, name);
                 }
 
 
             } else if (auswahl == 2) {
-                Hilfe.main(name,args);
+                Hilfe.main(name, args);
             } else {
                 System.out.println("Bitte geben sie 1 oder 2 ein!");
 
