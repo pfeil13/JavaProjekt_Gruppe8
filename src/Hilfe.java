@@ -20,7 +20,7 @@ public class Hilfe {
         int option = eingabe.nextInt();
 
         if (option == 1) {
-            Menue.menue(name,args);
+            Menue.main(args,name);
         } else if (option != 1)
 
             System.out.println("Diese Option ist nicht verfügbar!");
