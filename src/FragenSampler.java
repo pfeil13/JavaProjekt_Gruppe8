@@ -2,8 +2,9 @@ import java.io.*;
 import java.util.*;
 
 class FragenSampler {
-    public static void main(String name, int eingabe, String[] args) throws IOException {
-        FileReader fr = new FileReader("src/fragen_geographie.txt");
+
+    public static void main(String name, String[] args, String path) throws IOException {
+        FileReader fr = new FileReader(path);
         BufferedReader br = new BufferedReader(fr);
         String zeile_x = "0";
         int richtig = 0;
@@ -12,6 +13,10 @@ class FragenSampler {
         int auswahl;
         Scanner scanner = new Scanner(System.in);
 
+
+
+        //Fragen werden ausgewählt (je nach "path") und ausgegeben, sowie ausgewertet.
+
         while (!zeile_x.equals("###")) {
             zeile_x = br.readLine();
             if (zeile_x.equals("###"))
@@ -19,13 +24,13 @@ class FragenSampler {
                 anzahlfragen=richtig+falsch;
 
                 do{
-                    System.out.println("Du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
+                    System.out.println(name+ " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
                     System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zur Auswahl(2)");
                     //Scanner scanner = new Scanner(System.in);
                     auswahl = scanner.nextInt();
                     if (auswahl == 1)
                     {
-                        FragenSampler.main(name,eingabe, args);
+                        FragenSampler.main(name, args, path);
                     }else if (auswahl == 2)
                     {
                         Menue.menue(name,args);
@@ -61,4 +66,32 @@ class FragenSampler {
 
         br.close();
     }
+
+
+    }
+
+
+
+
+class Zuweisung
+{
+    public static void path(int eingabe, String[] args, String path) throws IOException
+    {
+        String begin = "src/fragen_";
+        String endung = ".txt";
+
+
+        //Zuweisung für den FileReader
+        if (eingabe == 1)
+        {
+            //Pfad
+            path = begin+"geographie"+endung;
+        } else if (eingabe == 2)
+        {
+            //Pfad
+           path = begin+"sport"+endung;
+        }
+
+    }
+
 }
