@@ -30,25 +30,22 @@ class FragenSampler {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.println("Anzahl Fragen: " + anzahl);
-
-
         while (!zeile_x.equals("###")) {
             zeile_x = br.readLine();
 
 
-            if (zeile_x.equals("###")) {
+            if (zeile_x.equals("###") || anzahl == 0) {
                 anzahlfragen = richtig + falsch;
 
                 do {
                     System.out.println(name + " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
-                    System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zum Menü(2)");
+                    System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
                     auswahl = scanner.nextInt();
+
                     if (auswahl == 1) {
-                        FragenSampler.main(name, args, eingabe, anzahl);
-                    } else if (auswahl == 2) {
                         Menue.main(args, name);
                     }
+
                 } while (auswahl != 1 || auswahl != 2);
             }
 
@@ -72,14 +69,15 @@ class FragenSampler {
             if (eingabeantwort.equals(antwort)) {
                 System.out.println("Das ist richtig!");
                 richtig++;
+                anzahl--;
             } else if (!eingabeantwort.equals(antwort)) {
                 System.out.println("Das ist leider falsch.");
                 falsch++;
+                anzahl--;
             }
-            anzahl--;
-            System.out.println(anzahl);
+            //anzahl--;
         }
         br.close();
-
     }
 }
+
