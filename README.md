@@ -15,7 +15,7 @@ Menü
 - Starten des Quiz
 - Anleitung
 
-#Milestones (erledigt)
+Milestones (erledigt)
 - mindestens 2 festdefinierte Themengebiete a 25 Fragen     (ja)
 - generische Fragenzusammenstellung                         (ja)
 - manuelle Festlegung der zu stellenden Fragen              (ja)
