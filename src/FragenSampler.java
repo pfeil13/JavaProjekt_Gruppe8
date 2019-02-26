@@ -75,7 +75,6 @@ class FragenSampler {
                 falsch++;
                 anzahl--;
             }
-            //anzahl--;
         }
         br.close();
     }
