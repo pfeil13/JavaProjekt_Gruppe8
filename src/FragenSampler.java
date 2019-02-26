@@ -38,7 +38,7 @@ class FragenSampler {
                 anzahlfragen = richtig + falsch;
 
                 do {
-                    System.out.println(name + " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
+                    System.out.println("\n" + name + " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
                     System.out.println("Was möchtest du jetzt tun?\n \n Dieses Themengebiet erneut bearbeiten(1) \n Zurück zum Menü(2)");
                     //Scanner scanner = new Scanner(System.in);
                     auswahl = scanner.nextInt();
