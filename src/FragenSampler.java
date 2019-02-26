@@ -46,7 +46,7 @@ class FragenSampler {
                         Menue.main(args, name);
                     }
 
-                } while (auswahl != 1 || auswahl != 2);
+                } while (auswahl != 1);
             }
 
 
