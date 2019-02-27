@@ -9,11 +9,19 @@ public class WriteCatalog { //TODO: BUG! Er soll die vom Nutzer angegebenen Frag
         FileWriter fw = new FileWriter("src/user_catalog.txt");
         BufferedWriter bw = new BufferedWriter(fw);
 
+        //FileReader fr = new FileReader("src/user_catalog.txt");
+        //BufferedReader br = new BufferedReader(fr);
+
+        System.out.println("Wie viele Fragen wollen Sie eingeben?");
+        anzahl = scanner.nextInt();
+
+
+        /*
         do {
             System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
             anzahl = scanner.nextInt();
 
-            while (anzahl <= 25) {
+            while (anzahl <= 25) { //TODO: BUG! "Frage eingeben" und "Antwort 1" werden aufeinmal ausgegeben!
                 System.out.println("Geben Sie EINE Frage ein: ");
                 eingabe = scanner.nextLine();
                 bw.write(eingabe);
@@ -44,9 +52,8 @@ public class WriteCatalog { //TODO: BUG! Er soll die vom Nutzer angegebenen Frag
                 bw.write(eingabe);
                 bw.newLine();
                 bw.write("###");
-
             }
             bw.close();
-        } while (anzahl > 25);
+        } while (anzahl > 25);*/
     }
 }

@@ -52,7 +52,6 @@ class Menue {
 
                 } else if (eingabe == 3) {
 
-                    //Zufallsmodus
                     //TODO: Zufallsmodus
 
                     /*
