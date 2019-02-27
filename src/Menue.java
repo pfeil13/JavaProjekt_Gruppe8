@@ -13,7 +13,7 @@ class Menue {
 
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1)  Hilfe(2)");
+        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3)");
         int auswahl;
         int anzahl;
 
@@ -77,10 +77,11 @@ class Menue {
 
 
             } else if (auswahl == 2) {
+                //Frageneditor
+            } else if (auswahl == 3) {
                 Hilfe.main(name, args);
             } else {
                 System.out.println("Bitte geben sie 1 oder 2 ein!");
-
             }
         } while (auswahl != 1 || auswahl != 2);
     }
