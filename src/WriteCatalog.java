@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class WriteCatalog { //TODO: BUG! Er soll die vom Nutzer angegebenen Fragen untereinander speichern - nicht überschreiben!
+public class WriteCatalog {
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int anzahl;
