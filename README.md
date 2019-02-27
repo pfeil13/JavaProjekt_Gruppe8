@@ -15,7 +15,7 @@ Menü
 - Starten des Quiz
 - Anleitung
 
-Milestones (erledigt)
+Milestones (Status)
 -
 - mindestens 2 festdefinierte Themengebiete a 25 Fragen     (ja)
 - generische Fragenzusammenstellung                         (ja)
