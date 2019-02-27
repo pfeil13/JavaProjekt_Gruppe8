@@ -1,16 +1,52 @@
 import java.util.*;
 import java.io.*;
 
-public class WriteCatalog {
+public class WriteCatalog { //TODO: BUG! Er soll die vom Nutzer angegebenen Fragen untereinander speichern - nicht überschreiben!
     public static void main(String[] args) throws IOException {
-
+        Scanner scanner = new Scanner(System.in);
+        String eingabe;
+        int anzahl;
         FileWriter fw = new FileWriter("src/user_catalog.txt");
         BufferedWriter bw = new BufferedWriter(fw);
 
-        bw.write("test test test");
-        bw.write("tset tset tset");
+        do {
+            System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
+            anzahl = scanner.nextInt();
 
-        bw.close();
+            while (anzahl <= 25) {
+                System.out.println("Geben Sie EINE Frage ein: ");
+                eingabe = scanner.nextLine();
+                bw.write(eingabe);
+                bw.newLine();
 
+                System.out.println("Geben Sie Antwortmöglichkeit 1 ein: ");
+                eingabe = scanner.nextLine();
+                bw.write("1) " + eingabe);
+                bw.newLine();
+
+                System.out.println("Geben Sie Antwortmöglichkeit 2 ein: ");
+                eingabe = scanner.nextLine();
+                bw.write("2) " + eingabe);
+                bw.newLine();
+
+                System.out.println("Geben Sie Antwortmöglichkeit 3 ein: ");
+                eingabe = scanner.nextLine();
+                bw.write("3) " + eingabe);
+                bw.newLine();
+
+                System.out.println("Geben Sie Antwortmöglichkeit 4 ein: ");
+                eingabe = scanner.nextLine();
+                bw.write("4) " + eingabe);
+                bw.newLine();
+
+                System.out.println("Nun geben Sie an, welche Antwortmöglichkeit die richtige ist: ");
+                eingabe = scanner.nextLine();
+                bw.write(eingabe);
+                bw.newLine();
+                bw.write("###");
+
+            }
+            bw.close();
+        } while (anzahl > 25);
     }
 }
