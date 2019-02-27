@@ -21,6 +21,8 @@ class FragenSampler {
             path = begin + "geschichte" + endung;
         }else if (eingabe == 4) {
             //TODO: Zufallsmodus!!!
+        } else if (eingabe == 5) {
+            path = begin + "user_catalog" + endung;
         }
 
         FileReader fr = new FileReader(path);

@@ -22,7 +22,7 @@ class Menue {
             auswahl = scanner.nextInt();
 
             if (auswahl == 1) {
-                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Geschichte(3) \n Zufallsmodus(4) \n zurück(5)");
+                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Geschichte(3) \n Zufallsmodus(4) \n Nutzerfragen(5) \n zurück(6)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1) {
                     System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
@@ -85,6 +85,16 @@ class Menue {
                 }*/
 
                 } else if (eingabe == 5) {
+                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                    anzahl = scanner.nextInt();
+                    if (anzahl == 25) { //TODO: Er sollte die Anzahl der Nutzerfragen zählen. 25 ist Beispielwert.
+                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl != 25) {
+                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    }
+                } else if (eingabe == 6) {
                     Menue.main(args, name);
                 }
 
