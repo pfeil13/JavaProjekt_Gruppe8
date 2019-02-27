@@ -16,7 +16,10 @@ class FragenSampler {
         } else if (eingabe == 2) {
             //Pfad
             path = begin + "sport" + endung;
-        } else if (eingabe == 3) {
+        } else if (eingabe==3){
+            //Pfad
+            path = begin + "geschichte" + endung;
+        }else if (eingabe == 4) {
             //TODO: Zufallsmodus!!!
         }
 
