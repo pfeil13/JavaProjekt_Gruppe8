@@ -50,7 +50,7 @@ class FragenSampler {
             }
 
 
-            System.out.println("");
+            System.out.println();
             System.out.println(zeile_x);
             zeile_x = br.readLine();
             System.out.println(zeile_x);

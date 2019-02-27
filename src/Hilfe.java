@@ -13,7 +13,7 @@ public class Hilfe {
             System.out.println(zeile);
         }
 
-        System.out.println("");
+        System.out.println();
         System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
         System.out.println("(1) zurück");
         Scanner eingabe = new Scanner(System.in);
