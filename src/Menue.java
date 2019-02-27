@@ -15,30 +15,62 @@ class Menue {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1)  Hilfe(2)");
         int auswahl;
+        int anzahl;
 
         do {
             auswahl = scanner.nextInt();
 
             if (auswahl == 1) {
-                //TODO: Jedes Themengebiet hat maximal 25 Fragen, dies sollte beim Abfragen der benutzerdefinierten Fragenanzahl berücksichtig werden.
-                //TODO: EVENTUELL mit Schleife lösen!
                 System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Zufallsmodus(3) \n zurück(4)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1) {
                     System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
-                    int anzahl = scanner.nextInt();
-
-                    FragenSampler.main(name, args, eingabe, anzahl);
+                    anzahl = scanner.nextInt();
+                    if (anzahl == 25) {
+                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl > 25) {
+                        System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle 25 gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl < 25) {
+                        System.out.println("Gut, es werden " + anzahl + " Fragen gestellt.");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    }
                 } else if (eingabe == 2) {
                     System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
-                    int anzahl = scanner.nextInt();
+                    anzahl = scanner.nextInt();
+                    if (anzahl == 25) {
+                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl > 25) {
+                        System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle 25 gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl < 25) {
+                        System.out.println("Gut, es werden " + anzahl + " Fragen gestellt.");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    }
 
-                    FragenSampler.main(name, args, eingabe, anzahl);
                 } else if (eingabe == 3) {
-                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
-                    int anzahl = scanner.nextInt();
 
-                    FragenSampler.main(name, args, eingabe, anzahl);
+                    //Zufallsmodus
+                    //TODO: Zufallsmodus
+
+                    /*
+                    if (eingabe == 1) {
+                    System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                    anzahl = scanner.nextInt();
+                    if (anzahl == 25) {
+                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl > 25) {
+                        System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle 25 gestellt!");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    } else if (anzahl < 25) {
+                        System.out.println("Gut, es werden " + anzahl + " Fragen gestellt.");
+                        FragenSampler.main(name, args, eingabe, anzahl);
+                    }
+                }*/
+
                 } else if (eingabe == 4) {
                     Menue.main(args, name);
                 }
