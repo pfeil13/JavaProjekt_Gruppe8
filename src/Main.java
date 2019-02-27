@@ -44,12 +44,17 @@ class Menue {
 
             if (auswahl == 1) {
 
-                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1)  zurück(2)");
+                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) Geschichte(2) gemischte Fragen(3) zurück(4)");
                 int eingabe = scanner.nextInt();
                 if (eingabe == 1)
                 {
                    FragenGeo.main(name,args);
-                }else if (eingabe ==2) {
+                }else if(eingabe == 2){
+                    FragenGeo.main(name,args);
+                }else if(eingabe == 3){
+                    // METHODE für gemischte Fragen
+                    System.out.println("Fehlende Methode");
+                }else if (eingabe ==4) {
                     Menue.menue(name,args);
                 }
 
