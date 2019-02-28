@@ -12,14 +12,14 @@ public class WriteCatalog {
         //BufferedReader br = new BufferedReader(fr);
 
         System.out.println("Wie viele Fragen wollen Sie eingeben?");
-        do {
+
             anzahl = scanner.nextInt();
             if (anzahl <= 25){
                  WriteCatalog.writequestions(args, anzahl, bw);
             }else {
                 System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
             }
-        }while (anzahl>0);
+
 
        //WriteCatalog.back(args, name);
         System.out.println(" ");
@@ -39,7 +39,8 @@ public class WriteCatalog {
 
 
     public static void writequestions(String[] args, int anzahl, BufferedWriter bw) throws IOException {
-             String eingabe;
+
+                String eingabe;
                 Scanner scann =new Scanner(System.in);
         do {
                 System.out.println(" ");
