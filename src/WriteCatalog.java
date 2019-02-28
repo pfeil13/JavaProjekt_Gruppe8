@@ -41,7 +41,7 @@ public class WriteCatalog {
     public static void writequestions(String[] args, int anzahl, BufferedWriter bw) throws IOException {
              String eingabe;
                 Scanner scann =new Scanner(System.in);
-        while (1 <= anzahl) {
+        do {
                 System.out.println(" ");
                 System.out.println("Geben Sie EINE Frage ein: ");
                 eingabe = scann.nextLine();
@@ -73,8 +73,8 @@ public class WriteCatalog {
                 bw.write(eingabe);
                 bw.newLine();
 
-                anzahl--;
-            }
+            anzahl--;
+            }while (1 <= anzahl);
             //bw.write("###");
             bw.close();
 
