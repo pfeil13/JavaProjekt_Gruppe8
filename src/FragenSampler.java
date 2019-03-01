@@ -6,23 +6,23 @@ class FragenSampler {
     public static void main(String name, String[] args, int eingabe, int anzahl) throws IOException {
 
         String begin = "src/fragen_";
-        String endung = ".txt";
+        String ending = ".txt";
         String path = "";
 
         //Zuweisung für den FileReader
         if (eingabe == 1) {
             //Pfad
-            path = begin + "geographie" + endung;
+            path = begin + "geographie" + ending;
         } else if (eingabe == 2) {
             //Pfad
-            path = begin + "sport" + endung;
+            path = begin + "sport" + ending;
         } else if (eingabe==3){
             //Pfad
-            path = begin + "geschichte" + endung;
+            path = begin + "geschichte" + ending;
         }else if (eingabe == 4) {
             //TODO: Zufallsmodus!!!
         } else if (eingabe == 5) {
-            path = begin + "user_catalog" + endung;
+            path = begin + "user_catalog" + ending;
         }
 
         FileReader fr = new FileReader(path);

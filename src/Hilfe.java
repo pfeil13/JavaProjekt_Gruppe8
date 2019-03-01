@@ -4,20 +4,20 @@ import java.util.*;
 public class Hilfe {
 
     public static void main(String name, String[] args) throws IOException {
-        FileReader freader = new FileReader("src/anleitung");
-        BufferedReader breader = new BufferedReader(freader);
+        FileReader fr = new FileReader("src/anleitung");
+        BufferedReader br = new BufferedReader(fr);
 
-        String zeile = "";
+        String line = "";
 
-        while ((zeile = breader.readLine()) != null) {
-            System.out.println(zeile);
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
         }
 
         System.out.println();
         System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
         System.out.println("(1) zurück");
-        Scanner eingabe = new Scanner(System.in);
-        int option = eingabe.nextInt();
+        Scanner userInput = new Scanner(System.in);
+        int option = userInput.nextInt();
 
         if (option == 1) {
             Menue.main(args,name);
@@ -25,7 +25,7 @@ public class Hilfe {
 
             System.out.println("Diese Option ist nicht verfügbar!");
         Hilfe.main(name,args);
-        breader.close();
+        br.close();
     }
 
 }
