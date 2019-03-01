@@ -3,10 +3,10 @@ import java.util.*;
 
 class FragenSampler {
 
-    public static void main(String name, String[] args, int userInput, int questionPool) throws IOException {
+    public static void main(String name, String[] args, int userInput, int numberOfQuestions) throws IOException {
 
         String begin = "src/fragen_";
-        String beginUM = "src/_";
+        String beginUM = "src/";
         String ending = ".txt";
         String path = "";
 
@@ -31,8 +31,7 @@ class FragenSampler {
         String line_x = "0";
         int correct = 0;
         int wrong = 0;
-        int amountOfQuestions = 0;
-        //int userInput;
+        int amountOfQuestions;
         Scanner scanner = new Scanner(System.in);
 
 
@@ -40,7 +39,7 @@ class FragenSampler {
             line_x = br.readLine();
 
 
-            if (line_x.equals("###") || questionPool == 0) {
+            if (line_x.equals("###") || numberOfQuestions == 0) {
                 amountOfQuestions = correct + wrong;
 
                 do {
@@ -75,11 +74,11 @@ class FragenSampler {
             if (userAnswer.equals(answer)) {
                 System.out.println("Das ist richtig!");
                 correct++;
-                questionPool--;
+                numberOfQuestions--;
             } else if (!userAnswer.equals(answer)) {
                 System.out.println("Das ist leider falsch.");
                 wrong++;
-                questionPool--;
+                numberOfQuestions--;
             }
         }
         br.close();

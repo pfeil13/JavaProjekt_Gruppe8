@@ -8,9 +8,6 @@ public class WriteCatalog {
         FileWriter fw = new FileWriter("src/user_catalog.txt");
         BufferedWriter bw = new BufferedWriter(fw);
 
-        // FileReader fr = new FileReader("src/user_catalog.txt");
-        //BufferedReader br = new BufferedReader(fr);
-
         System.out.println("Wie viele Fragen wollen Sie eingeben?");
 
         numberOfQuestions = scanner.nextInt();
@@ -20,8 +17,6 @@ public class WriteCatalog {
             System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
         }
 
-
-        //WriteCatalog.back(args, name);
         System.out.println(" ");
         System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
         System.out.println("(1) zurück");
@@ -38,7 +33,6 @@ public class WriteCatalog {
 
 
     public static void writequestions(String[] args, int counter, BufferedWriter bw) throws IOException {
-
         String input;
         Scanner scanner = new Scanner(System.in);
         do {
@@ -75,10 +69,7 @@ public class WriteCatalog {
 
             counter--;
         } while (1 <= counter);
-        //bw.write("###");
         bw.close();
-
-
     }
 }
 
