@@ -8,7 +8,7 @@ class Menue {
         System.out.println("Herzlich Willkommen zu unserem Quiz.");
         System.out.println("Verrate uns doch noch deinen Namen: ");
         String name;
-        name = scanner.next();
+        name = scanner.nextLine();
         Menue.main(args, name);
     }
 
