@@ -3,7 +3,7 @@ import java.util.*;
 
 class FragenSampler {
 
-    public static void main(String name, String[] args, int eingabe, int anzahl) throws IOException {
+    public static void main(String name, String[] args, int userInput, int questionPool) throws IOException {
 
         String begin = "src/fragen_";
         String beginUM = "src/_";
@@ -11,75 +11,75 @@ class FragenSampler {
         String path = "";
 
         //Zuweisung für den FileReader
-        if (eingabe == 1) {
+        if (userInput == 1) {
             //Pfad
             path = begin + "geographie" + ending;
-        } else if (eingabe == 2) {
+        } else if (userInput == 2) {
             //Pfad
             path = begin + "sport" + ending;
-        } else if (eingabe==3){
+        } else if (userInput == 3) {
             //Pfad
             path = begin + "geschichte" + ending;
-        }else if (eingabe == 4) {
+        } else if (userInput == 4) {
             //TODO: Zufallsmodus!!!
-        } else if (eingabe == 5) {
+        } else if (userInput == 5) {
             path = beginUM + "user_catalog" + ending; //UM stehht für UserMode
         }
 
         FileReader fr = new FileReader(path);
         BufferedReader br = new BufferedReader(fr);
-        String zeile_x = "0";
-        int richtig = 0;
-        int falsch = 0;
-        int anzahlfragen = 0;
-        int auswahl;
+        String line_x = "0";
+        int correct = 0;
+        int wrong = 0;
+        int amountOfQuestions = 0;
+        //int userInput;
         Scanner scanner = new Scanner(System.in);
 
 
-        while (!zeile_x.equals("###")) {
-            zeile_x = br.readLine();
+        while (!line_x.equals("###")) {
+            line_x = br.readLine();
 
 
-            if (zeile_x.equals("###") || anzahl == 0) {
-                anzahlfragen = richtig + falsch;
+            if (line_x.equals("###") || questionPool == 0) {
+                amountOfQuestions = correct + wrong;
 
                 do {
-                    System.out.println(name + " du hast von " + anzahlfragen + " Fragen " + richtig + " Fragen korrekt beantwortet.\n");
+                    System.out.println(name + " du hast von " + amountOfQuestions + " Fragen " + correct + " Fragen korrekt beantwortet.\n");
                     System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
-                    auswahl = scanner.nextInt();
+                    userInput = scanner.nextInt();
 
-                    if (auswahl == 1) {
+                    if (userInput == 1) {
                         Menue.main(args, name);
                     }
 
-                } while (auswahl != 1);
+                } while (userInput != 1);
             }
 
 
             System.out.println();
-            System.out.println(zeile_x);
-            zeile_x = br.readLine();
-            System.out.println(zeile_x);
-            zeile_x = br.readLine();
-            System.out.println(zeile_x);
-            zeile_x = br.readLine();
-            System.out.println(zeile_x);
-            zeile_x = br.readLine();
-            System.out.println(zeile_x);
-            String antwort = br.readLine();
+            System.out.println(line_x);
+            line_x = br.readLine();
+            System.out.println(line_x);
+            line_x = br.readLine();
+            System.out.println(line_x);
+            line_x = br.readLine();
+            System.out.println(line_x);
+            line_x = br.readLine();
+            System.out.println(line_x);
+            String answer = br.readLine();
 
             System.out.print("Deine Antwort: ");
-            String eingabeantwort = scanner.next();
+            String userAnswer = scanner.next();
 
 
-            if (eingabeantwort.equals(antwort)) {
+            if (userAnswer.equals(answer)) {
                 System.out.println("Das ist richtig!");
-                richtig++;
-                anzahl--;
-            } else if (!eingabeantwort.equals(antwort)) {
+                correct++;
+                questionPool--;
+            } else if (!userAnswer.equals(answer)) {
                 System.out.println("Das ist leider falsch.");
-                falsch++;
-                anzahl--;
+                wrong++;
+                questionPool--;
             }
         }
         br.close();
