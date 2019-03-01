@@ -88,7 +88,7 @@ class Menue {
             } else if (input == 3) {
                 Hilfe.main(name, args);
             } else {
-                System.out.println("Bitte geben sie 1, 2 oder 3 ein!");
+                System.out.println("Treffe bitte eine korrekte Menüauswahl");
             }
         } while (input != 1 || input != 2 || input != 3);
     }
