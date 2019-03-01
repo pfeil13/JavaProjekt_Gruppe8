@@ -6,6 +6,7 @@ class FragenSampler {
     public static void main(String name, String[] args, int eingabe, int anzahl) throws IOException {
 
         String begin = "src/fragen_";
+        String beginUM = "src/_";
         String ending = ".txt";
         String path = "";
 
@@ -22,7 +23,7 @@ class FragenSampler {
         }else if (eingabe == 4) {
             //TODO: Zufallsmodus!!!
         } else if (eingabe == 5) {
-            path = begin + "user_catalog" + ending;
+            path = beginUM + "user_catalog" + ending; //UM stehht für UserMode
         }
 
         FileReader fr = new FileReader(path);
