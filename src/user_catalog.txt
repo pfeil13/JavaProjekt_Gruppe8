@@ -4,10 +4,10 @@ Was ist 1+1?
 3) 3
 4) 4
 2
-###Wie heißt die Hauptstadt von BW?
+Was ist die Landeshauptstadt von BW?
 1) Stuttgart
 2) München
-3) Potsdam
-4) Freiburg
+3) Freiburg
+4) Berlin
 1
 ###
