@@ -14,7 +14,7 @@ class Menue {
 
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3)");
+        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3) \n Spiel beenden(4)");
         int input;
         int numberOfQuestions = 0;
 
@@ -101,7 +101,7 @@ class Menue {
                         System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
                         numberOfQuestions = scanner.nextInt();
                         if (numberOfQuestions <= existingQuestions) {
-                            System.out.println("Gut, es werden "+numberOfQuestions+" Fragen des Katalogs gestellt!");
+                            System.out.println("Gut, es werden "+ numberOfQuestions +" Fragen des Katalogs gestellt!");
                             FragenSampler.main(name, args, userInput, numberOfQuestions);
                         } else if (numberOfQuestions > existingQuestions ) {
                             System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle " + existingQuestions + " gestellt!");
@@ -119,9 +119,11 @@ class Menue {
                 WriteCatalog.main(args,name);
             } else if (input == 3) {
                 Hilfe.main(name, args);
+            } else if (input ==4){
+                System.exit(0);
             } else {
                 System.out.println("Treffe bitte eine korrekte Menüauswahl");
             }
-        } while (input != 1 || input != 2 || input != 3);
+        } while (input != 1 || input != 2 || input != 3 || input!=4);
     }
 }
