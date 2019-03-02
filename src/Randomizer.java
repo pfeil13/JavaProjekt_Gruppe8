@@ -7,14 +7,14 @@ public class Randomizer {
         int generatedQuestions = 0;
         int x = 0;
         //Fragen Geographie
-        FileWriter fwGeo = new FileWriter("src/fragen_geographie.txt");
-        BufferedWriter bwGeo = new BufferedWriter(fwGeo);
+        FileReader frGeo = new FileReader("src/fragen_geographie.txt");
+        BufferedReader brGeo = new BufferedReader(frGeo);
         //Fragen Sport
-        FileWriter fwSpo = new FileWriter("src/fragen_sport.txt");
-        BufferedWriter bwSpo = new BufferedWriter(fwSpo);
+        FileReader frSpo = new FileReader("src/fragen_sport.txt");
+        BufferedReader brSpo = new BufferedReader(frSpo);
         //Fragen Geschichte
-        FileWriter fwHist = new FileWriter("src/fragen_geschichte.txt");
-        BufferedWriter bwHist = new BufferedWriter(fwHist);
+        FileReader frHist = new FileReader("src/fragen_geschichte.txt");
+        BufferedReader brHist = new BufferedReader(frHist);
 
 
         int questionsGeo = (int) (Math.random() * 8 + 1);
