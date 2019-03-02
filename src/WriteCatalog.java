@@ -67,6 +67,8 @@ public class WriteCatalog {
             bw.write(input);
             bw.newLine();
 
+            bw.write("###");
+
             counter--;
         } while (1 <= counter);
         bw.close();

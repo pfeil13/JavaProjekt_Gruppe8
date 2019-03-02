@@ -1,19 +1,13 @@
-ysdhbfk
-1) hjdfhvdb
-2) dfjvnhij
-3) hdfbvl
-4) bdhfbv
-3
-jdkbv
-1) jdfb
-2) sdbfvjh
-3) hfjvb
-4) hfbvik
-4
-sdjfkk
-1) skdhfb
-2) sldjfb
-3) hdfijbg
-4) jfdbvk
+Was ist 1+1?
+1) 1
+2) 2
+3) 3
+4) 4
+2
+###Wie heißt die Hauptstadt von BW?
+1) Stuttgart
+2) München
+3) Potsdam
+4) Freiburg
 1
 ###
