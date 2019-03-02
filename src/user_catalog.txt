@@ -1,13 +1,30 @@
-Was ist 1+1?
-1) 1
-2) 2
-3) 3
-4) 4
+Wie viele tage hat ein Jahr?
+1) 456
+2) 365
+3) 298
+4) 376
 2
-Was ist die Landeshauptstadt von BW?
-1) Stuttgart
-2) München
-3) Freiburg
-4) Berlin
+Wie viele Monate hat ein Jahr?
+1) 15
+2) 17
+3) 12
+4) 9
+3
+Wie heißen Normalsterbliche in den HarryPotterBüchern?
+1) Muggel
+2) Buggel
+3) Normies
+4) Normalos
 1
-###
+Bei welcher Temperatur (in Celcius) fängt Wasser an zu Kochen?
+1) 120
+2) 200
+3) 90
+4) 100
+4
+Was ist 1+1?
+1) 2
+2) 3
+3) 1,5
+4) 4
+1

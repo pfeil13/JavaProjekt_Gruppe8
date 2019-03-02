@@ -37,11 +37,11 @@ class FragenSampler {
         Scanner scanner = new Scanner(System.in);
 
 
-        while (!line_x.equals("###")) {
+        while (!line_x.equals("")) {
             line_x = br.readLine();
 
 
-            if (line_x.equals("###") || numberOfQuestions == 0) {
+            if (line_x.equals("") || numberOfQuestions == 0) {
                 amountOfQuestions = correct + wrong;
 
                 do {

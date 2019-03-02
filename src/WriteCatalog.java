@@ -5,7 +5,7 @@ public class WriteCatalog {
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int numberOfQuestions;
-        FileWriter fw = new FileWriter("src/user_catalog.txt");
+        FileWriter fw = new FileWriter("src/user_catalog.txt",true);
         BufferedWriter bw = new BufferedWriter(fw);
 
         System.out.println("Wie viele Fragen wollen Sie eingeben?");
@@ -71,7 +71,6 @@ public class WriteCatalog {
 
             counter--;
         } while (1 <= counter);
-        bw.write("###");
         bw.close();
     }
 }
