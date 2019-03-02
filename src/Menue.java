@@ -66,6 +66,10 @@ class Menue {
                     }
                 } else if (userInput == 4) {
 
+                    System.out.println("Nun werden 25 Fragen aus zufälligen Themengebieten gewählt.");
+                    numberOfQuestions = 25;
+                    Randomizer.main(args, name, numberOfQuestions);
+
 
                 } else if (userInput == 5) {
 
