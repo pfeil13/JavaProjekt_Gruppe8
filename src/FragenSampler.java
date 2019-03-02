@@ -23,7 +23,7 @@ class FragenSampler {
         } else if (userInput == 4) {
 
         } else if (userInput == 5) {
-            path = beginUM + "user_catalog" + ending; //UM stehht für UserMode
+            path = beginUM + "user_catalog" + ending; //UM steht für UserMode
         }
 
         FileReader fr = new FileReader(path);

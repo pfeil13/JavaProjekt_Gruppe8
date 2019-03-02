@@ -68,16 +68,44 @@ class Menue {
 
 
                 } else if (userInput == 5) {
-                    FragenSampler.main(name, args, userInput, numberOfQuestions); //TODO: Problem: Muss Nutzerfragenanzahl ermitteln
-                   /*System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
-                    numberOfQuestions = scanner.nextInt();
-                    if (numberOfQuestions == amountUserInput) {
-                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
-                        FragenSampler.main(name, args, userInput, numberOfQuestions);
-                    } else if (numberOfQuestions != 25) {
-                        System.out.println("Gut, es werden alle Fragen des Katalogs gestellt!");
-                        FragenSampler.main(name, args, userInput, numberOfQuestions);
-                    }*/
+
+                        String path ="src/user_catalog.txt";
+                        FileReader fr = new FileReader(path);
+                        BufferedReader br = new BufferedReader(fr);
+                        int countLines = 0;
+                        while ( br.readLine() != null ) {//Zählt beschriftete Zeilen
+                            countLines++;
+                        }
+                        int existingQuestions = countLines/6;//berechnet wie viele Fragen da sind
+
+
+                    if (countLines==0){
+                        System.out.println("Sorry, momentan sind keine Fragen im Katalog.");
+                        System.out.println(" ");
+                        System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
+                        System.out.println("(1) zurück");
+                        Scanner scanner1 = new Scanner(System.in);
+                        int option = scanner1.nextInt();
+
+                        if (option == 1) {
+                            Menue.main(args, name);
+                        } else if (option != 1) {
+                            System.out.println("Diese Option ist nicht verfügbar" + name + "!");
+                        }
+                    }else {
+                        System.out.println("Momentan sind/ist " + existingQuestions+" Frage/n im Katalog");
+                        System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
+                        numberOfQuestions = scanner.nextInt();
+                        if (numberOfQuestions <= existingQuestions) {
+                            System.out.println("Gut, es werden "+numberOfQuestions+" Fragen des Katalogs gestellt!");
+                            FragenSampler.main(name, args, userInput, numberOfQuestions);
+                        } else if (numberOfQuestions > existingQuestions ) {
+                            System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle"+ existingQuestions +"gestellt!");
+                            FragenSampler.main(name, args, userInput, numberOfQuestions);
+                        }
+                    }
+
+
                 } else if (userInput == 6) {
                     Menue.main(args, name);
                 }
