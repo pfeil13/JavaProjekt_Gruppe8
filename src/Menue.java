@@ -104,7 +104,7 @@ class Menue {
                             System.out.println("Gut, es werden "+numberOfQuestions+" Fragen des Katalogs gestellt!");
                             FragenSampler.main(name, args, userInput, numberOfQuestions);
                         } else if (numberOfQuestions > existingQuestions ) {
-                            System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle"+ existingQuestions +"gestellt!");
+                            System.out.println("So viele Fragen gibt es in diesem Katalog nicht! Es werden daher einfach alle " + existingQuestions + " gestellt!");
                             FragenSampler.main(name, args, userInput, numberOfQuestions);
                         }
                     }
