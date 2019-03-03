@@ -2,14 +2,14 @@ import java.util.*;
 import java.io.*;
 
 public class ScoreWriter {
-    public static void main(String[] args, String name, int amountOfQuestions, int correct, int wrong) throws IOException {
+    public static void main(String[] args, String name, int amountOfQuestions, int correct, int wrong, String uhrzeit, String datum) throws IOException {
 
         //FileWriter fw = new FileWriter("src/score");
         BufferedWriter bw = new BufferedWriter(
                 new OutputStreamWriter(
                         new FileOutputStream("src/score", true)));
 
-        bw.write(name + ": " + "Fragen beantwortet: " + amountOfQuestions + "  / " + "Korrekte Fragen: " + correct + " / " + "Falsche Fragen: " + wrong);
+        bw.write("(" + datum + " " + uhrzeit + ") " + name + ": " + "Fragen beantwortet: " + amountOfQuestions + "  / " + "Korrekte Fragen: " + correct + " / " + "Falsche Fragen: " + wrong);
         bw.newLine();
         bw.close();
 

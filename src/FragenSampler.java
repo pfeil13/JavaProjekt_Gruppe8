@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.text.*;
 
 class FragenSampler {
 
@@ -35,6 +36,7 @@ class FragenSampler {
         Scanner scanner = new Scanner(System.in);
 
 
+
         while (!line_x.equals("")) {
             line_x = br.readLine();
 
@@ -57,7 +59,16 @@ class FragenSampler {
                         textmodule_amountOfQuestions = "Frage";
                     }
                     System.out.println(name + " du hast von " + amountOfQuestions + " " + textmodule_amountOfQuestions + " " + correct + " " + textmodule_correctQuestions + " korrekt beantwortet.\n");
-                    ScoreWriter.main(args, name, amountOfQuestions, correct, wrong);
+
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                    String uhrzeit = sdf.format(new Date());
+
+                    SimpleDateFormat sdf2 = new SimpleDateFormat("dd.MM.yyyy");
+                    String datum = sdf2.format(new Date());
+
+
+                    ScoreWriter.main(args, name, amountOfQuestions, correct, wrong, uhrzeit, datum);
                     System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
                     userInput = scanner.nextInt();
 
