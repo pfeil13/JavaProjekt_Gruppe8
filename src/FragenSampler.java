@@ -60,7 +60,7 @@ class FragenSampler {
                     SimpleDateFormat sdf2 = new SimpleDateFormat("dd.MM.yyyy");
                     String datum = sdf2.format(new Date());
 
-                    ScoreWriter.main(args, name, amountOfQuestions, correct, wrong, uhrzeit, datum);
+                    PlayerWriter.main(name, amountOfQuestions, correct, wrong, uhrzeit, datum);
                     System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
                     userInput = scanner.nextInt();
 

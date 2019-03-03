@@ -1,12 +1,12 @@
 import java.io.*;
 import java.util.Scanner;
 
-class ScoreWriter {
-    public static void main(String[] args, String name, int amountOfQuestions, int correct, int wrong, String uhrzeit, String datum) throws IOException {
+class PlayerWriter {
+    public static void main(String name, int amountOfQuestions, int correct, int wrong, String uhrzeit, String datum) throws IOException {
 
         BufferedWriter bw = new BufferedWriter(
                 new OutputStreamWriter(
-                        new FileOutputStream("src/player", true)));
+                        new FileOutputStream("src/player.txt", true)));
 
         bw.write("(" + datum + " " + uhrzeit + ") " + name + ": " + "Fragen beantwortet: " + amountOfQuestions + "  - " + "Korrekte Fragen: " + correct + " - " + "Falsche Fragen: " + wrong);
         bw.newLine();
@@ -14,10 +14,10 @@ class ScoreWriter {
     }
 
     public static void readScore(String[] args, String name) throws IOException {
-        FileReader fr = new FileReader("src/player");
+        FileReader fr = new FileReader("src/player.txt");
         BufferedReader br = new BufferedReader(fr);
 
-        String line = "";
+        String line;
         while ((line = br.readLine()) != null) {
             System.out.println(line);
         }
@@ -30,7 +30,7 @@ class ScoreWriter {
             Menue.main(args, name);
         } else if (userInput != 1)
             System.out.println("Diese Option ist nicht verfügbar!");
-        ScoreWriter.readScore(args, name);
+        PlayerWriter.readScore(args, name);
         br.close();
     }
 }

@@ -7,7 +7,7 @@ class Hilfe {
     public static void main(String name, String[] args) throws IOException {
         FileReader fr = new FileReader("src/anleitung");
         BufferedReader br = new BufferedReader(fr);
-        String line = "";
+        String line;
 
         while ((line = br.readLine()) != null) {
             System.out.println(line);

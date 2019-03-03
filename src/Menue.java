@@ -18,7 +18,7 @@ class Menue {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3) \n Spielerliste(4) \n Spiel beenden(5)");
         int input;
-        int numberOfQuestions = 0;
+        int numberOfQuestions;
 
         do {
             input = scanner.nextInt();
@@ -109,7 +109,7 @@ class Menue {
             } else if (input == 3) {
                 Hilfe.main(name, args);
             } else if (input == 4) {
-                ScoreWriter.readScore(args, name);
+                PlayerWriter.readScore(args, name);
             } else if (input == 5) {
                 System.exit(0);
             } else {
