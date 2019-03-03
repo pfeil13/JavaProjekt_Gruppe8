@@ -8,7 +8,7 @@ import java.util.Scanner;
 class FragenSampler {
 
     public static void main(String name, String[] args, int userInput, int numberOfQuestions) throws IOException {
-
+        //Hier wird nun zunächst der jeweilige Pfad gebaut - anhängig von der jeweiligen Nutzereingabe 'userInput'
         String begin = "src/fragen_";
         String beginUM = "src/";
         String ending = ".txt";
@@ -39,7 +39,7 @@ class FragenSampler {
             if (numberOfQuestions == 0 || line_x.equals("###")) {
                 amountOfQuestions = correct + wrong;
                 do {
-                    if (correct == 1) {
+                    if (correct == 1) { //Textbausteine zur Unterscheidung Singular/Plural
                         textmodule_correctQuestions = "Frage";
                     } else if (correct > 1) {
                         textmodule_correctQuestions = "Fragen";
@@ -69,7 +69,7 @@ class FragenSampler {
                     }
                 } while (userInput != 1);
             }
-
+            //Auslesen der Fragen/Antworten
             System.out.println();
             System.out.println(line_x);
             line_x = br.readLine();
@@ -84,7 +84,7 @@ class FragenSampler {
 
             System.out.print("Deine Antwort: ");
             String userAnswer = scanner.next();
-
+            //'Antworten-Check' - selbstverständlich mit Unterscheidung zwischen richtig/falsch
             if (userAnswer.equals(answer)) {
                 System.out.println("Das ist richtig!");
                 correct++;

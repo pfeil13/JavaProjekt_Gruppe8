@@ -8,11 +8,11 @@ class Hilfe {
         FileReader fr = new FileReader("src/anleitung");
         BufferedReader br = new BufferedReader(fr);
         String line;
-
+        //Solange die 'line' - also gegenwärtige Zeile NICHT 'null' ist, wird der Dokumenteninhalt ausgegeben.
         while ((line = br.readLine()) != null) {
             System.out.println(line);
         }
-
+        //Standart-Menü-Auswahl
         System.out.println();
         System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
         System.out.println("(1) zurück");
@@ -22,8 +22,9 @@ class Hilfe {
         if (option == 1) {
             Menue.main(args, name);
         } else if (option != 1)
-
             System.out.println("Diese Option ist nicht verfügbar!");
+
+
         Hilfe.main(name, args);
         br.close();
     }

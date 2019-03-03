@@ -7,13 +7,13 @@ class WriteCatalog {
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int numberOfQuestions;
-        FileWriter fw = new FileWriter("src/user_catalog.txt", true);
+        FileWriter fw = new FileWriter("src/user_catalog.txt", true); // Die Nutzerfragen sollen nicht überschrieben werden!
         BufferedWriter bw = new BufferedWriter(fw);
 
         System.out.println("Wie viele Fragen wollen Sie eingeben?");
 
         numberOfQuestions = scanner.nextInt();
-        if (numberOfQuestions <= 25) {
+        if (numberOfQuestions <= 25) { //Check: Wir wollen, dass es im Projekt vereinheitlicht gilt: nur 25 Fragen
             WriteCatalog.writequestions(numberOfQuestions, bw);
         } else {
             System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
@@ -26,14 +26,14 @@ class WriteCatalog {
         if (option == 1) {
             Menue.main(args, name);
         } else if (option != 1) {
-            System.out.println("Diese Option ist nicht verfügbar" + name + "!");
+            System.out.println("Diese Option ist nicht verfügbar " + name + "!");
         }
     }
 
     private static void writequestions(int counter, BufferedWriter bw) throws IOException {
         String input;
         Scanner scanner = new Scanner(System.in);
-        do {
+        do { //Hier erfolgt die Eingabe der Nutzerfragen
             System.out.println(" ");
             System.out.println("Geben Sie EINE Frage ein: ");
             input = scanner.nextLine();
