@@ -1,13 +1,12 @@
-import java.util.*;
 import java.io.*;
+import java.util.Scanner;
 
 public class ScoreWriter {
     public static void main(String[] args, String name, int amountOfQuestions, int correct, int wrong, String uhrzeit, String datum) throws IOException {
 
-        //FileWriter fw = new FileWriter("src/score");
         BufferedWriter bw = new BufferedWriter(
                 new OutputStreamWriter(
-                        new FileOutputStream("src/score", true)));
+                        new FileOutputStream("src/player", true)));
 
         bw.write("(" + datum + " " + uhrzeit + ") " + name + ": " + "Fragen beantwortet: " + amountOfQuestions + "  / " + "Korrekte Fragen: " + correct + " / " + "Falsche Fragen: " + wrong);
         bw.newLine();
@@ -17,7 +16,7 @@ public class ScoreWriter {
     }
 
     public static void readScore(String[] args, String name) throws IOException {
-        FileReader fr = new FileReader("src/score");
+        FileReader fr = new FileReader("src/player");
         BufferedReader br = new BufferedReader(fr);
 
         String line = "";
