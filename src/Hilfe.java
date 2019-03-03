@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Hilfe {
+class Hilfe {
     public static void main(String name, String[] args) throws IOException {
         FileReader fr = new FileReader("src/anleitung");
         BufferedReader br = new BufferedReader(fr);

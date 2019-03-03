@@ -87,7 +87,7 @@ class Menue {
                         if (option == 1) {
                             Menue.main(args, name);
                         } else if (option != 1) {
-                            System.out.println("Diese Option ist nicht verfügbar" + name + "!");
+                            System.out.println("Diese Option ist nicht verfügbar " + name + "!");
                         }
                     } else {
                         System.out.println("Momentan sind/ist " + existingQuestions + " Frage/n im Katalog");

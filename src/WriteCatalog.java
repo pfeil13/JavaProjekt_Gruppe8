@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class WriteCatalog {
+class WriteCatalog {
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int numberOfQuestions;
@@ -14,7 +14,7 @@ public class WriteCatalog {
 
         numberOfQuestions = scanner.nextInt();
         if (numberOfQuestions <= 25) {
-            WriteCatalog.writequestions(args, numberOfQuestions, bw);
+            WriteCatalog.writequestions(numberOfQuestions, bw);
         } else {
             System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
         }
@@ -30,7 +30,7 @@ public class WriteCatalog {
         }
     }
 
-    public static void writequestions(String[] args, int counter, BufferedWriter bw) throws IOException {
+    private static void writequestions(int counter, BufferedWriter bw) throws IOException {
         String input;
         Scanner scanner = new Scanner(System.in);
         do {

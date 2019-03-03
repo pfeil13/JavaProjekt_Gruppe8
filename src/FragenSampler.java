@@ -15,13 +15,10 @@ class FragenSampler {
         String path = "";
 
         if (userInput == 1) {
-            //Pfad
             path = begin + "geographie" + ending;
         } else if (userInput == 2) {
-            //Pfad
             path = begin + "sport" + ending;
         } else if (userInput == 3) {
-            //Pfad
             path = begin + "geschichte" + ending;
         } else if (userInput == 4) {
             path = beginUM + "user_catalog" + ending; //UM steht für UserMode
