@@ -5,7 +5,7 @@
 Fragen
 -
 - Multiple Choice
-- unterschiedliche Themengebiete
+- unterschiedliche Themengebiete + Nutzerkategorie
 
 
 
