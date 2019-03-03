@@ -39,7 +39,7 @@ class FragenSampler {
             line_x = br.readLine();
 
 
-            if (numberOfQuestions == 0) {
+            if (numberOfQuestions == 0 || line_x.equals("###")) {
                 amountOfQuestions = correct + wrong;
 
                 do {
@@ -57,6 +57,7 @@ class FragenSampler {
                         textmodule_amountOfQuestions = "Frage";
                     }
                     System.out.println(name + " du hast von " + amountOfQuestions + " " + textmodule_amountOfQuestions + " " + correct + " " + textmodule_correctQuestions + " korrekt beantwortet.\n");
+                    ScoreWriter.main(args, name, amountOfQuestions, correct, wrong);
                     System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
                     userInput = scanner.nextInt();
 

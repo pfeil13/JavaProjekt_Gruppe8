@@ -14,7 +14,7 @@ class Menue {
 
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3) \n Spiel beenden(4)");
+        System.out.println("Hallo " + name + ", was möchtest du machen? \n Quiz starten(1) \n Frageneditor(2) \n Hilfe(3) \n Spielerliste(4) \n Spiel beenden(5)");
         int input;
         int numberOfQuestions = 0;
 
@@ -113,6 +113,8 @@ class Menue {
             } else if (input == 3) {
                 Hilfe.main(name, args);
             } else if (input ==4){
+                ScoreWriter.readScore(args, name);
+            } else if (input == 5) {
                 System.exit(0);
             } else {
                 System.out.println("Treffe bitte eine korrekte Menüauswahl");
