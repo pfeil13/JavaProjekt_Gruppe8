@@ -1,11 +1,13 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class WriteCatalog {
     public static void main(String[] args, String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int numberOfQuestions;
-        FileWriter fw = new FileWriter("src/user_catalog.txt",true);
+        FileWriter fw = new FileWriter("src/user_catalog.txt", true);
         BufferedWriter bw = new BufferedWriter(fw);
 
         System.out.println("Wie viele Fragen wollen Sie eingeben?");
@@ -16,21 +18,17 @@ public class WriteCatalog {
         } else {
             System.out.println("Du kannst maxmial 25 Fragen eingeben. Wie viel möchtest du eingeben: ");
         }
-
         System.out.println(" ");
         System.out.println("Deine weiteren Optionen. Bitte eine der Optionen eingeben und mit Enter bestätigen.");
         System.out.println("(1) zurück");
         Scanner scanner1 = new Scanner(System.in);
         int option = scanner1.nextInt();
-
         if (option == 1) {
             Menue.main(args, name);
         } else if (option != 1) {
             System.out.println("Diese Option ist nicht verfügbar" + name + "!");
         }
-
     }
-
 
     public static void writequestions(String[] args, int counter, BufferedWriter bw) throws IOException {
         String input;
@@ -66,8 +64,6 @@ public class WriteCatalog {
             input = scanner.nextLine();
             bw.write(input);
             bw.newLine();
-
-
 
             counter--;
         } while (1 <= counter);

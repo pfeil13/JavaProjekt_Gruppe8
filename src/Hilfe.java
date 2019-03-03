@@ -1,12 +1,12 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Hilfe {
-
     public static void main(String name, String[] args) throws IOException {
         FileReader fr = new FileReader("src/anleitung");
         BufferedReader br = new BufferedReader(fr);
-
         String line = "";
 
         while ((line = br.readLine()) != null) {
@@ -20,11 +20,11 @@ public class Hilfe {
         int option = userInput.nextInt();
 
         if (option == 1) {
-            Menue.main(args,name);
+            Menue.main(args, name);
         } else if (option != 1)
 
             System.out.println("Diese Option ist nicht verfügbar!");
-        Hilfe.main(name,args);
+        Hilfe.main(name, args);
         br.close();
     }
 

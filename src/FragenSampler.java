@@ -1,6 +1,9 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
 
 class FragenSampler {
 
@@ -11,7 +14,6 @@ class FragenSampler {
         String ending = ".txt";
         String path = "";
 
-        //Zuweisung für den FileReader
         if (userInput == 1) {
             //Pfad
             path = begin + "geographie" + ending;
@@ -24,7 +26,6 @@ class FragenSampler {
         } else if (userInput == 4) {
             path = beginUM + "user_catalog" + ending; //UM steht für UserMode
         }
-
         FileReader fr = new FileReader(path);
         BufferedReader br = new BufferedReader(fr);
         String textmodule_correctQuestions = "";
@@ -35,15 +36,11 @@ class FragenSampler {
         int amountOfQuestions;
         Scanner scanner = new Scanner(System.in);
 
-
-
         while (!line_x.equals("")) {
             line_x = br.readLine();
 
-
             if (numberOfQuestions == 0 || line_x.equals("###")) {
                 amountOfQuestions = correct + wrong;
-
                 do {
                     if (correct == 1) {
                         textmodule_correctQuestions = "Frage";
@@ -60,13 +57,11 @@ class FragenSampler {
                     }
                     System.out.println(name + " du hast von " + amountOfQuestions + " " + textmodule_amountOfQuestions + " " + correct + " " + textmodule_correctQuestions + " korrekt beantwortet.\n");
 
-
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                     String uhrzeit = sdf.format(new Date());
 
                     SimpleDateFormat sdf2 = new SimpleDateFormat("dd.MM.yyyy");
                     String datum = sdf2.format(new Date());
-
 
                     ScoreWriter.main(args, name, amountOfQuestions, correct, wrong, uhrzeit, datum);
                     System.out.println("Was möchtest du jetzt tun? \n Zurück zum Menü(1)");
@@ -75,10 +70,8 @@ class FragenSampler {
                     if (userInput == 1) {
                         Menue.main(args, name);
                     }
-
                 } while (userInput != 1);
             }
-
 
             System.out.println();
             System.out.println(line_x);
@@ -94,7 +87,6 @@ class FragenSampler {
 
             System.out.print("Deine Antwort: ");
             String userAnswer = scanner.next();
-
 
             if (userAnswer.equals(answer)) {
                 System.out.println("Das ist richtig!");
