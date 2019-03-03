@@ -22,7 +22,7 @@ class Menue {
             input = scanner.nextInt();
 
             if (input == 1) {
-                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Geschichte(3) \n Zufallsmodus(4) \n Nutzerfragen(5) \n zurück(6)");
+                System.out.println("Welches Themengebiet möchtest du bearbeiten? \n Geographie(1) \n Sport(2) \n Geschichte(3) \n Nutzerfragen(4) \n zurück(5)");
                 int userInput = scanner.nextInt();
                 if (userInput == 1) {
                     System.out.println("Wie viele Fragen möchtest du beantworten, " + name + "?");
@@ -66,13 +66,6 @@ class Menue {
                     }
                 } else if (userInput == 4) {
 
-                    System.out.println("Nun werden 25 Fragen aus zufälligen Themengebieten gewählt.");
-                    numberOfQuestions = 25;
-                    Randomizer.main(args, name, numberOfQuestions);
-
-
-                } else if (userInput == 5) {
-
                         String path ="src/user_catalog.txt";
                         FileReader fr = new FileReader(path);
                         BufferedReader br = new BufferedReader(fr);
@@ -110,7 +103,7 @@ class Menue {
                     }
 
 
-                } else if (userInput == 6) {
+                } else if (userInput == 5) {
                     Menue.main(args, name);
                 }
 

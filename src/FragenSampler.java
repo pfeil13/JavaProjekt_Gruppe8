@@ -21,8 +21,6 @@ class FragenSampler {
             //Pfad
             path = begin + "geschichte" + ending;
         } else if (userInput == 4) {
-
-        } else if (userInput == 5) {
             path = beginUM + "user_catalog" + ending; //UM steht für UserMode
         }
 
@@ -41,7 +39,7 @@ class FragenSampler {
             line_x = br.readLine();
 
 
-            if (line_x.equals("") || numberOfQuestions == 0) {
+            if (numberOfQuestions == 0) {
                 amountOfQuestions = correct + wrong;
 
                 do {
